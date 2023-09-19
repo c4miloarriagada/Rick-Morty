@@ -2,7 +2,7 @@
   "homepage": "https://c4miloarriagada.github.io/Rick-Morty",
   "name": "rick-morty",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -27,6 +27,7 @@
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-solid": "^0.13.0",
+    "gh-pages": "^6.0.0",
     "postcss": "^8.4.28",
     "prettier": "3.0.3",
     "tailwindcss": "^3.3.3",
