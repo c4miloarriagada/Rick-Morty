@@ -16,7 +16,7 @@ export const Container = () => {
       <div class='flex overflow-x-auto -z-10 h-[calc(100vh_-_9rem)]  flex-col items-center bg-sky-950'>
         <Router>
           <Routes>
-            <Route path={'/Rick-Morty'} component={Landing} />
+            <Route path={'/Rick-Morty/'} component={Landing} />
             <Route path={'/characters'} component={CharacterPage} />
             <Route path={'/episodes'} component={EpisodesPage} />
           </Routes>
