@@ -29,14 +29,14 @@ export const CardCharacter = ({
             <div class=' h-full col-span-8 w-full gap-2  flex'>
               <ul class='h-16 gap-1  flex  w-2/5 col-span-4 pl-3 flex-col overflow-auto  overflow-x-hidden'>
                 <p class='font-bold  sticky top-0 bg-sky-950 pt-1'>
-                  Capitules:
+                  Episodes:
                 </p>
 
                 <For each={episode}>
                   {(cap) => (
                     <li class='flex max-w-max items-center'>
                       <FiTv class='mr-1 text-gray-700-400 text-sky-300' />{' '}
-                      Episode #{' '}
+                      #{' '}
                       {cap.slice(-2).includes('/')
                         ? cap.slice(-1)
                         : cap.slice(-2)}
