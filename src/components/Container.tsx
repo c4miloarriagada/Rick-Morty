@@ -17,8 +17,8 @@ export const Container = () => {
         <Router>
           <Routes>
             <Route path={'/Rick-Morty/'} component={Landing} />
-            <Route path={'/characters'} component={CharacterPage} />
-            <Route path={'/episodes'} component={EpisodesPage} />
+            <Route path={'/Rick-Morty/characters'} component={CharacterPage} />
+            <Route path={'/Rick-Morty/episodes'} component={EpisodesPage} />
           </Routes>
         </Router>
       </div>

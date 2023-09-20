@@ -29,6 +29,7 @@ export const CharacterPage = () => {
     state.data?.pages?.flatMap((c) => c.results)
   )
 
+
   createEffect(() => {
     if (isIntercesecting()) {
       state.fetchNextPage()
