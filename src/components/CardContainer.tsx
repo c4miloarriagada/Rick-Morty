@@ -23,7 +23,7 @@ export const CardContainer = () => {
   }
 
   return (
-    <section class='text-white  p-7 gap-7 pt-24 w-4/5 grid grid-cols-2 grid-rows-2 '>
+    <section class='text-white   p-7 gap-7 pt-24 w-4/5 grid lg:grid-cols-2 lg:grid-rows-2  md:grid-rows-3 md:grid-cols-1 sm:pt-9 sm:grid-rows-3 sm:grid-cols-1 max-md:pt-9'>
       <Switch>
         <Match when={query.isLoading}>
           <For each={Array.from({ length: 3 })}>
@@ -46,13 +46,13 @@ export const CardContainer = () => {
             {(options) => (
               <div
                 onclick={() => handleClick(options)}
-                class='border border-sky-400 rounded-md flex shadow-xl h-24 justify-between cursor-pointer transition-all ease-in-out hover:scale-105 '
-              >
+                class='border border-sky-400 sm:w-full rounded-md flex shadow-xl h-24 justify-between cursor-pointer transition-transform hover:skew-x-3 overflow-hidden'
+                >
                 <div
-                  class={`bg-[url('https://res.cloudinary.com/dwtkwakbc/image/upload/v1693626436/670_ri51qq.webp')] bg-contain bg-no-repeat  h-full w-96`}
+                  class={`bg-[url('https://res.cloudinary.com/dwtkwakbc/image/upload/v1693626436/670_ri51qq.webp')]   bg-cover  bg-center h-full md:h-40 w-full   bg-no-repeat `}
                 ></div>
                 <div class=' flex w-1/2 justify-center items-center'>
-                  <h3 class='font-bold text-xl uppercase'>{options}</h3>
+                  <h3 class='font-bold text-xl uppercase max-sm:text-sm max-sm:px-2'>{options}</h3>
                 </div>
               </div>
             )}
