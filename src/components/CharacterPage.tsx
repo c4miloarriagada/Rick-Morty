@@ -39,7 +39,7 @@ export const CharacterPage = () => {
 
   return (
     <div class='w-full text-white h-[60rem] overflow-scroll overflow-x-hidden '>
-      <h1 class='flex justify-center font-black text-7xl'>Characters</h1>
+      <h1 class='flex justify-center font-black text-7xl max-sm:text-xl'>Characters</h1>
 
       <section class='flex gap-5 py-5 justify-center flex-wrap '>
         <Switch fallback={<Loading />}>
