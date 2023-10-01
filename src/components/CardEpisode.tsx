@@ -8,7 +8,7 @@ export const CardEpisode = ({
   characters
 }: Results) => {
   return (
-    <div class='border cursor-pointer border-sky-400 h-52 w-80 overflow-hidden rounded-md p-4'>
+    <div class='border cursor-pointer animate-[fadeIn_1s]  border-sky-400 h-52 w-80 overflow-hidden rounded-md p-4'>
       <div class='flex flex-col gap-y-2'>
         <span class='font-bold flex gap-2'>
           Episode Number: <p class='font-light'># {id}</p>

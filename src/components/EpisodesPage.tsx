@@ -30,15 +30,14 @@ export const EpisodesPage = () => {
 
     createEffect(() => {
     if (isIntercesecting()) {
-      
       state.fetchNextPage()
       setEpisode(state.data?.pages?.flatMap((resp) => resp.results))
     }
   })
   return (
     <div class='w-full text-white h-[60rem] overflow-scroll overflow-x-hidden '>
-      <h1 class='flex justify-center font-black text-7xl tracking-in-expand'>Episodes</h1>
-      <section class='flex gap-5 py-5 justify-center flex-wrap animate-[fadeIn_1s] px-2'>
+      <h1 class='flex justify-center font-black text-7xl text-focus-in'>Episodes</h1>
+      <section class='flex gap-5 py-5 justify-center flex-wrap px-2'>
         <Switch>
           <Match when={state.isLoading}>
             <Loading />
