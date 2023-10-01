@@ -1,26 +1,26 @@
 import { createQuery } from '@tanstack/solid-query'
 import { rickAndMortyApi } from '../api/rick&MortyApi'
-import { Results } from '../interfaces/characters'
+import { Results } from '../interfaces/episodes'
 import { Match, Switch, createSignal } from 'solid-js'
-import { TbCircleDotFilled } from 'solid-icons/tb'
+import { FiTv } from 'solid-icons/fi'
 
-const fetchData = async (character: string): Promise<Results | undefined> => {
-  if (character) {
+const fetchData = async (number: string): Promise<Results | undefined> => {
+  if (number) {
     const { data } = await rickAndMortyApi.get<Results>(
-      `character/${character}`
+      `episode/${number}`
     )
 
     return data
   }
 }
 
-export const List = ({ link }: { link: string }) => {
+export const ListEpisodes = ({ link }: { link: string }) => {
   const sliceString = link.split('/')
   const [url] = createSignal(sliceString.slice(-1).pop() ?? '')
   const state = createQuery(
-    () => ['nameCharacter', url()],
+    () => ['nameEpisode', url()],
     () => fetchData(url())
-  )
+  )  
 
   return (
     <Switch fallback={<>Loading...</>}>
@@ -28,8 +28,8 @@ export const List = ({ link }: { link: string }) => {
         <li>Loading...</li>
       </Match>
       <Match when={state.data?.name}>
-        <li class='flex gap-x-2 items-center'>
-          <TbCircleDotFilled color='#38bdf8' />
+        <li class='flex max-w-max items-center'>
+        <FiTv class='mr-1 text-gray-700-400 text-sky-300' />
           {state.data?.name}
         </li>
       </Match>

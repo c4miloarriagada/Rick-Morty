@@ -2,6 +2,7 @@ import { For, Match, Switch } from 'solid-js'
 import { TbPointFilled } from 'solid-icons/tb'
 import { FiTv } from 'solid-icons/fi'
 import { Results } from '../interfaces/characters'
+import { ListEpisodes } from './ListEpisodes'
 
 export const CardCharacter = ({
   image,
@@ -34,13 +35,7 @@ export const CardCharacter = ({
 
                 <For each={episode}>
                   {(cap) => (
-                    <li class='flex max-w-max items-center'>
-                      <FiTv class='mr-1 text-gray-700-400 text-sky-300' />{' '}
-                      #{' '}
-                      {cap.slice(-2).includes('/')
-                        ? cap.slice(-1)
-                        : cap.slice(-2)}
-                    </li>
+                   <ListEpisodes link={cap}/>
                   )}
                 </For>
               </ul>

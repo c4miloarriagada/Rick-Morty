@@ -4,9 +4,11 @@ import { rickAndMortyApi } from '../api/rick&MortyApi'
 import { Loading } from './Loading'
 import { CardEpisode } from './CardEpisode'
 import type { Episode, Results } from '../interfaces/episodes'
+import { useIntersectionObserver } from '../hook/useIntersectionObserver'
 
 const fetchData = async (page: string): Promise<Episode> => {
   const { data } = await rickAndMortyApi.get<Episode>(`episode?page=${page}`)
+
   return data
 }
 
@@ -20,17 +22,24 @@ const infinityQuery = () => {
 }
 
 export const EpisodesPage = () => {
+  const isIntercesecting = useIntersectionObserver('#intersection')
   const state = infinityQuery()
-  const [episode, ] = createSignal<Results[] | undefined>(
+  const [episode, setEpisode] = createSignal<Results[] | undefined>(
     state.data?.pages?.flatMap((e) => e.results)
   )
 
-
+    createEffect(() => {
+    if (isIntercesecting()) {
+      
+      state.fetchNextPage()
+      setEpisode(state.data?.pages?.flatMap((resp) => resp.results))
+    }
+  })
   return (
     <div class='w-full text-white h-[60rem] overflow-scroll overflow-x-hidden '>
       <h1 class='flex justify-center font-black text-7xl tracking-in-expand'>Episodes</h1>
-      <section class='flex gap-5 py-5 justify-center flex-wrap animate-[fadeIn_1s]'>
-        <Switch fallback={<Loading />}>
+      <section class='flex gap-5 py-5 justify-center flex-wrap animate-[fadeIn_1s] px-2'>
+        <Switch>
           <Match when={state.isLoading}>
             <Loading />
           </Match>
