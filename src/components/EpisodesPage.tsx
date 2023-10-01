@@ -25,11 +25,10 @@ export const EpisodesPage = () => {
     state.data?.pages?.flatMap((e) => e.results)
   )
 
-  createEffect(() => {})
 
   return (
     <div class='w-full text-white h-[60rem] overflow-scroll overflow-x-hidden '>
-      <h1 class='flex justify-center font-black text-7xl'>Episodes</h1>
+      <h1 class='flex justify-center font-black text-7xl tracking-in-expand'>Episodes</h1>
       <section class='flex gap-5 py-5 justify-center flex-wrap animate-[fadeIn_1s]'>
         <Switch fallback={<Loading />}>
           <Match when={state.isLoading}>

@@ -9,19 +9,12 @@ const getOptions = async (): Promise<Options> => {
   return data
 }
 
-const imgUrl = [
-  'https://res.cloudinary.com/dwtkwakbc/image/upload/v1693626436/670_ri51qq.webp',
-  'https://res.cloudinary.com/dwtkwakbc/image/upload/v1693626047/S3e7_Citadel_reconstruction_f00ixg.webp',
-  'https://res.cloudinary.com/dwtkwakbc/image/upload/v1693626209/YHAUBUYW75FZVLG4Z4WL5S6LMY_chfcos.avif'
-]
-
 export const CardContainer = () => {
   const query = createQuery(() => ['options'], getOptions)
   const navigate = useNavigate()
   const handleClick = (route: string) => {
     navigate(route)
   }
-
   return (
     <section class='text-white   p-7 gap-7 pt-24 w-4/5 grid lg:grid-cols-2 lg:grid-rows-2  md:grid-rows-3 md:grid-cols-1 sm:pt-9 sm:grid-rows-3 sm:grid-cols-1 max-md:pt-9'>
       <Switch>
@@ -43,18 +36,14 @@ export const CardContainer = () => {
         </Match>
         <Match when={query.isSuccess}>
           <For each={query.data && Object.keys(query.data)}>
-            {(options, index) => (
+            {(options) => (
               <div
                 onclick={() => handleClick(options)}
                 class='border border-sky-400 sm:w-full rounded-md flex shadow-xl h-24 justify-between cursor-pointer transition-transform bounce-in-right overflow-hidden  hover:bg-sky-700'
-              >
-                
+              >     
                   <div
-                    class={`bg-[url('${
-                      imgUrl[index()]
-                    }')]   bg-left  md:h-40 bg-[length:350px_200px] w-full  bg-no-repeat `}
-                  ></div>
-                
+                    class={`${options && `bg-${options}-`}   bg-left  md:h-40 bg-[length:350px_200px] w-full  bg-no-repeat `}
+                  ></div> 
                 <div class=' flex w-1/2 justify-center items-center'>
                   <h3 class='font-bold text-xl uppercase max-sm:text-sm max-sm:px-2'>
                     {options}{' '}
