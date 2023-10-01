@@ -1,3 +1,4 @@
+import { TbCircleDotFilled } from 'solid-icons/tb'
 import { Results } from '../interfaces/episodes'
 import { List } from './List'
 
@@ -21,10 +22,11 @@ export const CardEpisode = ({
           {' '}
           Air Date: <p class='font-light'>{air_date}</p>
         </span>
-        <span class='bg-black flex gap-2 w-full h-12 overflow-hidden overflow-y-scroll'>
-          <ul>
+        <span class=' flex gap-2 w-full h-12 flex-col overflow-hidden overflow-y-scroll'>
+          <span class='text-sm sticky top-0 bg-sky-600 px-2 font-bold'>Characters saw in the episode:</span>
+          <ul class='gap-y-2 flex flex-col'>
             {characters.map((value) => (
-              <List link={value} />
+             <List link={value} /> 
             ))}
           </ul>
         </span>

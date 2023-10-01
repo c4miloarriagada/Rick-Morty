@@ -9,6 +9,7 @@ const getOptions = async (): Promise<Options> => {
   return data
 }
 
+
 export const CardContainer = () => {
   const query = createQuery(() => ['options'], getOptions)
   const navigate = useNavigate()
@@ -42,7 +43,7 @@ export const CardContainer = () => {
                 class='border border-sky-400 sm:w-full rounded-md flex shadow-xl h-24 justify-between cursor-pointer transition-transform bounce-in-right overflow-hidden  hover:bg-sky-700'
               >     
                   <div
-                    class={`${options && `bg-${options}-`}   bg-left  md:h-40 bg-[length:350px_200px] w-full  bg-no-repeat `}
+                    class={`bg-${options}-  bg-left  md:h-40 bg-[length:350px_200px] w-full  bg-no-repeat `}
                   ></div> 
                 <div class=' flex w-1/2 justify-center items-center'>
                   <h3 class='font-bold text-xl uppercase max-sm:text-sm max-sm:px-2'>
