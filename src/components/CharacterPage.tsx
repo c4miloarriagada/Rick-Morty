@@ -41,7 +41,7 @@ export const CharacterPage = () => {
     <div class='w-full text-white h-[60rem] overflow-scroll overflow-x-hidden '>
       <h1 class='flex justify-center font-black text-7xl max-sm:text-3xl  text-focus-in  '>Characters</h1>
 
-      <section class='flex gap-5 py-5 justify-center flex-wrap '>
+      <section class='flex gap-5 py-5 justify-center flex-wrap max-sm:gap-y-0'>
         <Switch fallback={<Loading />}>
           <Match when={state.isLoading}>
             <Loading />

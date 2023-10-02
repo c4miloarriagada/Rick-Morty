@@ -35,9 +35,9 @@ export const EpisodesPage = () => {
     }
   })
   return (
-    <div class='w-full text-white h-[60rem] overflow-scroll overflow-x-hidden '>
-      <h1 class='flex justify-center font-black text-7xl text-focus-in'>Episodes</h1>
-      <section class='flex gap-5 py-5 justify-center flex-wrap px-2'>
+    <div class='w-full text-white h-[60rem] overflow-scroll overflow-x-hidden max-sm:pl-4'>
+      <h1 class='flex justify-center font-black text-7xl max-sm:text-3xl text-focus-in'>Episodes</h1>
+      <section class='flex gap-5 py-5 justify-center flex-wrap px-2 max-sm:pr-0'>
         <Switch>
           <Match when={state.isLoading}>
             <Loading />
@@ -49,7 +49,7 @@ export const EpisodesPage = () => {
           </Match>
         </Switch>
       </section>
-      <div id='intersection'></div>
+      <div class=' h-11 w-11   bottom-0 absolut'  id='intersection'></div>
     </div>
   )
 }

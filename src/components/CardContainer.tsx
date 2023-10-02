@@ -43,7 +43,7 @@ export const CardContainer = () => {
                 class='border border-sky-400 sm:w-full rounded-md flex shadow-xl h-24 justify-between cursor-pointer transition-transform bounce-in-right overflow-hidden  hover:bg-sky-700'
               >     
                   <div
-                    class={`${options === 'characters' && 'bg-characters-' || options === 'episodes' && 'bg-episodes-' || options === 'locations' && 'bg-locations-'} bg-left  md:h-40 bg-[length:350px_200px] w-full  bg-no-repeat `}
+                    class={`${options === 'characters' && 'bg-characters-' || options === 'episodes' && 'bg-episodes-' || options === 'locations' && 'bg-locations-'} bg-left  md:h-40 bg-[length:350px_200px] w-full  bg-no-repeat  max-sm:bg-cover`}
                   ></div> 
                 <div class=' flex w-1/2 justify-center items-center'>
                   <h3 class='font-bold text-xl uppercase max-sm:text-sm max-sm:px-2'>
