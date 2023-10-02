@@ -28,7 +28,7 @@ export const ListEpisodes = ({ link }: { link: string }) => {
         <li>Loading...</li>
       </Match>
       <Match when={state.data?.name}>
-        <li class='flex max-w-max items-center'>
+        <li class='flex w-max items-center '>
         <FiTv class='mr-1 text-gray-700-400 text-sky-300' />
           {state.data?.name}
         </li>

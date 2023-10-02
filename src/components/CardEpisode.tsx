@@ -22,7 +22,7 @@ export const CardEpisode = ({
           Air Date: <p class='font-light'>{air_date}</p>
         </span>
         <span class=' flex gap-2 w-full h-40 flex-col overflow-hidden overflow-y-scroll '>
-          <span class='text-sm sticky top-0 bg-sky-600 px-2 font-bold'>Characters saw in the episode:</span>
+          <span class='text-sm sticky top-0 bg-sky-600 px-2 font-bold'>Characters seen in the episode:</span>
           <ul class='gap-y-2 flex flex-col '>
             {characters.map((value) => (
              <List link={value} /> 

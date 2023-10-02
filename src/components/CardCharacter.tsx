@@ -48,8 +48,8 @@ export const CardCharacter = ({
             <span class='font-bold  flex '>Origin: {origin.name}</span>
             <span class='font-bold  flex'>Location: {location.name}</span>
              <div class='h-16 w-4/5 '>
-              <ul class='h-20 gap-1  flex  col-span-4  flex-col overflow-auto  overflow-x-hidden '>
-                <p class='font-bold  sticky top-0 bg-sky-950 pt-1 '>
+              <ul class='h-20 gap-2  flex  col-span-4  flex-col overflow-auto  overflow-x-hidden '>
+                <p class='font-bold  sticky top-0 bg-sky-950 pt-1'>
                   Episodes:
                 </p>
 
