@@ -3,6 +3,7 @@ import { Router, Route, Routes } from '@solidjs/router'
 import { Landing } from './Landing'
 import { CharacterPage } from './CharacterPage'
 import { EpisodesPage } from './EpisodesPage'
+import { LocationPage } from './LocationPage'
 
 export const Container = () => {
   const [state] = useCommon()
@@ -19,6 +20,7 @@ export const Container = () => {
             <Route path={'/Rick-Morty/'} component={Landing} />
             <Route path={'/Rick-Morty/characters'} component={CharacterPage} />
             <Route path={'/Rick-Morty/episodes'} component={EpisodesPage} />
+            <Route path={'/Rick-Morty/locations'} component={LocationPage}/>
           </Routes>
         </Router>
       </div>

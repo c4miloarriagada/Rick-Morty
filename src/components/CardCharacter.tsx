@@ -24,7 +24,9 @@ export const CardCharacter = ({
           />
         </div>
         <div class='h-64  w-1/2 flex flex-col items-center'>
-            <span class='text-4xl w-full text-sky-500 font-black  flex justify-center my-3 max-sm:text-xl max-sm:pr-1'>{name}</span>
+          <span class='text-4xl w-full text-sky-500 font-black  flex justify-center my-3 max-sm:text-xl max-sm:pr-1'>
+            {name}
+          </span>
           <div class='max-sm:h-3  w-full  flex flex-col  gap-y-2'>
             <span class='font-bold  gap-2 items-center flex'>
               Status:
@@ -47,19 +49,13 @@ export const CardCharacter = ({
             <span class='font-bold  flex '>Gender: {gender}</span>
             <span class='font-bold  flex '>Origin: {origin.name}</span>
             <span class='font-bold  flex'>Location: {location.name}</span>
-             <div class='h-16 w-4/5 '>
-              <ul class='h-20 gap-2  flex  col-span-4  flex-col overflow-auto  overflow-x-hidden '>
-                <p class='font-bold  sticky top-0 bg-sky-950 pt-1'>
-                  Episodes:
-                </p>
+            <div class='h-16 w-4/5 '>
+                <p class='font-bold  sticky top-0 bg-sky-400 p-1  '>Episodes:</p>
+              <ul class='h-20 gap-2  flex  col-span-4  flex-col overflow-auto  overflow-x-auto '>
 
-                <For each={episode}>
-                  {(cap) => (
-                   <ListEpisodes link={cap}/>
-                  )}
-                </For>
+                <For each={episode}>{(cap) => <ListEpisodes link={cap} />}</For>
               </ul>
-              </div>   
+            </div>
           </div>
         </div>
       </div>
