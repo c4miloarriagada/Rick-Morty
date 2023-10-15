@@ -15,11 +15,11 @@ export const CardCharacter = ({
 }: Results) => {
   return (
     <>
-      <div class='h-64 w-[45rem] animate-[fadeIn_1s] gap-9  relative flex border border-sky-400 overflow-hidden  rounded-md text-white   bg-sky-950 shadow-md    cursor-pointer transition-all max-sm:scale-75 max-sm:h-[20rem]'>
-        <div class='h-64 w-1/2'>
+      <div class='h-64 w-[45rem] animate-[fadeIn_1s] gap-9  max-sm:gap-3 relative flex border border-sky-400 overflow-hidden  rounded-md text-white   bg-sky-950 shadow-md    cursor-pointer transition-all max-sm:scale-90 max-sm:h-[18rem] '>
+        <div class='h-64 w-1/2 '>
           <img
             src={image}
-            class='object-center  w-full  h-64  max-sm:h-[20rem] '
+            class='object-center  w-full  h-64  max-sm:h-[18rem] max-sm:w-56'
             alt='img'
           />
         </div>
