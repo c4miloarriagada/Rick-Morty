@@ -28,7 +28,7 @@ export const List = ({ link }: { link: string }) => {
         <li>Loading...</li>
       </Match>
       <Match when={state.data?.name}>
-        <li class='flex gap-x-2 items-center'>
+        <li class='flex gap-x-2 items-center '>
           <TbCircleDotFilled color='#38bdf8' />
           {state.data?.name}
         </li>

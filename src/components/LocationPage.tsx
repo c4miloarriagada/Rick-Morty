@@ -31,6 +31,7 @@ export const LocationPage = () => {
   createEffect(() => {
     if (isIntercesecting()) {
       state.fetchNextPage
+      setLocations(state.data?.pages.flatMap((resp) => resp.results))
     }
   })
 
@@ -40,7 +41,7 @@ export const LocationPage = () => {
         Locations
       </h1>
 
-      <section class='flex gap-5 py-5 justify-center flex-wrap max-sm:gap-y-0'>
+      <section class='flex gap-5  py-5 justify-center flex-wrap '>
         <Switch fallback={<Loading />}>
           <Match when={state.isLoading}>
             <Loading />

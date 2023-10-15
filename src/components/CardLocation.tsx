@@ -14,7 +14,7 @@ export const CardLocation = ({ name, type, dimension , residents } : Results) =>
         <span class="flex justify-center gap-x-3">Type: {type} </span>
         <span class="flex justify-center ">Dimension: {dimension} </span>
         <div >
-        <ul class="flex justify-center pl-2  h-24 flex-col overflow-x-auto mt-2">    
+        <ul class="flex   justify-center pl-2 mt-4  h-24 flex-col overflow-x-auto">    
          <For each={residents}>{(item) => <List link={item}/>}</For>
         </ul>
         </div>
