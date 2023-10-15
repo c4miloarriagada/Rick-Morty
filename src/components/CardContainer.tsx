@@ -17,7 +17,7 @@ export const CardContainer = () => {
     navigate(route)
   }
   return (
-    <section class='text-white   p-7 gap-7 pt-24 w-4/5 grid lg:grid-cols-2 lg:grid-rows-2  md:grid-rows-3 md:grid-cols-1 sm:pt-9 sm:grid-rows-3 sm:grid-cols-1 max-md:pt-9'>
+    <section class='text-white   p-7 gap-7 pt-24  w-4/5 grid lg:grid-cols-2 lg:grid-rows-2  md:grid-rows-3 md:grid-cols-1 sm:pt-9 sm:grid-rows-3 sm:grid-cols-1 max-md:pt-9'>
       <Switch>
         <Match when={query.isLoading}>
           <For each={Array.from({ length: 3 })}>

@@ -14,9 +14,9 @@ export const SideBar = () => {
 
   return (
     <nav
-      class={`bg-sky-900 max-sm:z-30  col-span-1  ${
-        state.open ? 'w-36 ' : 'w-14'
-      } transition-all ease-in-out duration-300    flex flex-col items-center hover:bg-sky-800`}
+      class={`bg-sky-900 max-sm:z-30  ${
+        state.open ? 'col-span-1 w-36 ' : 'col-span-1 w-14'
+      } transition-all ease-in-out duration-300  z-10  flex flex-col items-center hover:bg-sky-800`}
     >
       <div class='w-full min-h-full transition-all  ease-in-out duration-300'>
         {state.open ? (
