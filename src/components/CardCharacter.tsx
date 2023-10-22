@@ -15,11 +15,11 @@ export const CardCharacter = ({
 }: Results) => {
   return (
     <>
-      <div class='h-64 w-[45rem] animate-[fadeIn_1s] gap-9  max-sm:gap-3 relative flex border border-sky-400 overflow-hidden  rounded-md text-white   bg-sky-950 shadow-md    cursor-pointer transition-all max-sm:scale-90 max-sm:h-[18rem] '>
-        <div class='h-64 w-1/2 '>
+      <div class='h-80 w-[45rem] animate-[fadeIn_1s] gap-9  max-sm:gap-3 relative flex border border-sky-400 overflow-hidden  rounded-md text-white   bg-sky-950 shadow-md    cursor-pointer transition-all max-sm:scale-90 max-sm:h-[23rem] '>
+        <div class='h-full w-1/2 max-sm:flex max-sm:items-center '>
           <img
             src={image}
-            class='object-center  w-full  h-64  max-sm:h-[18rem] max-sm:w-56'
+            class='object-center  w-full  h-80   max-sm:w-full'
             alt='img'
           />
         </div>
@@ -50,8 +50,8 @@ export const CardCharacter = ({
             <span class='font-bold  flex '>Origin: {origin.name}</span>
             <span class='font-bold  flex'>Location: {location.name}</span>
             <div class='h-16 w-4/5 '>
-                <p class='font-bold  sticky top-0 bg-sky-400 p-1  '>Episodes:</p>
-              <ul class='h-20 gap-2  flex  col-span-4  flex-col overflow-auto  overflow-x-auto '>
+                <p class='font-bold  sticky top-0 bg-sky-400 p-1 border-white border mb-1 '>Episodes:</p>
+              <ul class='h-24 gap-2  flex  col-span-4  flex-col overflow-auto  overflow-x-auto '>
 
                 <For each={episode}>{(cap) => <ListEpisodes link={cap} />}</For>
               </ul>
