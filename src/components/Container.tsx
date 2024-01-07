@@ -10,7 +10,7 @@ export const Container = () => {
     <main
       class={`col-span-11  transition-all ease-in duration-300`}
     >
-      <div class='flex overflow-x-hidden pt-14 -z-10 h-[calc(100vh_-_9rem)]  flex-col items-center bg-sky-950'>
+      <div class='flex overflow-x-hidden  -z-10 h-[calc(100vh_-_9rem)]  flex-col items-center bg-sky-950'>
         <Router>
           <Routes>
             <Route path={'/Rick-Morty/'} component={Landing} />
